@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting Incidents</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- DM Sans Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">poll</span> Insights
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="/index">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/map">
+              <span class="material-icons-outlined">pin_drop</span> Map
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Header -->
+
+      <div class="container">
+        <div class="header col-md-12 jumbotron text-center">
+          <h1>Gun Violence in America</h1>
+          <p>
+            A Dashboard for Understanding Major Incidents by Location from (1982-2023)
+          </p>
+        </div>
+        <div class="main-title">
+          <!-- <p class="font-weight-bold">Add year filter here!</p> -->
+        </div>
+      </div>
+      <!-- End Header-->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">INCIDENTS</p>
+              <span class="material-icons-outlined text-blue"
+                >personal_injury</span
+              >
+            </div>
+            <span id="incidents" class="text-primary font-weight-bold"></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">TOTAL VICTIMS</p>
+              <span class="material-icons-outlined text-orange"
+                >medical_information</span
+              >
+            </div>
+            <span id="victims" class="text-primary font-weight-bold"></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">FATALITIES</p>
+              <span class="material-icons-outlined text-green"
+                >monitor_heart</span
+              >
+            </div>
+            <span id="fatalities" class="text-primary font-weight-bold"></span>
+          </div>
+        </div>
+
+        <div class="charts">
+          <div class="charts-card">
+            <p class="chart-title">Top Ten Gun Violence Incidents </p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Distribution of Gun Shooting Incidents by Place</p>
+            <div id="pie-chart"></div>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="charts-card">
+            <p class="chart-title">Total Victims and Fatalities of Gun Violence by City</p>
+              <p class="chart-title">(Top Ten)</p>
+            <div id="group-chart"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- End Main -->
+    </div>
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.39.0/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/static/js/logic_1.js"></script>
+  </body>
+</html>
