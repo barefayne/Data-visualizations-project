@@ -33,7 +33,7 @@ The aim of our project is to explore the gun violence that has occurred in the U
 1. Discovery
 Data source: Kaggle
 File type: csv
-Link: Gun Violence, USA
+Link: <a href="https://www.kaggle.com/datasets/nidzsharma/us-mass-shootings-19822023" target="_blank">Gun Violence, USA</a>
 2. Transformation (ETL)
 Loaded csv file, changed data types, filled in missing data and exported dataframe to database.
 3. Analysis
